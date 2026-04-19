@@ -1,0 +1,15 @@
+# Node.js
+node_modules/
+
+# SQLite DB（データはローカルのみ）
+backend/db/todos.db
+
+# 環境変数
+.env
+
+# OS生成ファイル
+.DS_Store
+Thumbs.db
+
+# Viteビルド成果物
+frontend/dist/
