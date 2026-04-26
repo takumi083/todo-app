@@ -137,7 +137,7 @@ EOF
 #### 0-4. 最初のコミット（空のリポジトリを記録）
 ```bash
 git add .gitignore
-git commit -m "initial commit: add .gitignore"
+git commit -m ".gitignoreの追加"
 ```
 
 #### 0-5. GitHubへ接続してプッシュ
@@ -169,7 +169,7 @@ git push -u origin main
 #### コミット
 ```bash
 git add .
-git commit -m "feat: setup frontend (Vite+React+TypeScript) and backend (Express) scaffolding"
+git commit -m "フロントエンドとバックエンドの環境構築"
 git push
 ```
 
@@ -202,14 +202,14 @@ curl -X POST http://localhost:3001/api/todos \
 #### コミット＆Pull Request
 ```bash
 git add .
-git commit -m "feat: implement CRUD API endpoints with SQLite"
+git commit -m "CRUD APIエンドポイントの実装"
 git push -u origin feature/backend-api
 ```
 
 GitHubでPull Requestを作成:
 1. リポジトリページを開く
 2. 「Compare & pull request」ボタンをクリック
-3. タイトル: `feat: implement backend CRUD API`
+3. タイトル: `バックエンドCRUD APIの実装`
 4. 説明: 実装した内容・動作確認方法を簡単に記述
 5. 「Create pull request」→「Merge pull request」→「Confirm merge」
 6. ローカルで `main` に戻り最新を取得:
@@ -258,23 +258,23 @@ git checkout -b feature/frontend-ui
 ```bash
 # 型定義を先にコミット
 git add frontend/src/types/
-git commit -m "feat: add Todo type definition"
+git commit -m "Todo型定義の追加"
 
 # API関数
 git add frontend/src/api/
-git commit -m "feat: add typed API fetch functions for todos"
+git commit -m "Todo APIのfetch関数の追加"
 
 # カスタムフック
 git add frontend/src/hooks/
-git commit -m "feat: add useTodos custom hook for state management"
+git commit -m "useTodosカスタムフックの追加"
 
 # コンポーネント
 git add frontend/src/components/
-git commit -m "feat: implement TodoList, TodoItem, AddTodo components"
+git commit -m "TodoList・TodoItem・AddTodoコンポーネントの実装"
 
 # App.tsx
 git add frontend/src/App.tsx
-git commit -m "feat: wire up components in App"
+git commit -m "App.tsxでコンポーネントを組み合わせ"
 
 git push -u origin feature/frontend-ui
 ```
@@ -295,7 +295,7 @@ git checkout -b feature/styling
 
 ```bash
 git add .
-git commit -m "style: add CSS modules for layout and todo items"
+git commit -m "CSSモジュールでレイアウトとTodoアイテムのスタイリング"
 git push -u origin feature/styling
 ```
 
@@ -310,13 +310,13 @@ Pull Request → マージ
 ```bash
 git checkout -b feature/filter
 # フィルター機能実装
-git commit -m "feat: add filter for completed/incomplete todos"
+git commit -m "完了/未完了フィルターの追加"
 git push -u origin feature/filter
 # PR → マージ
 
 git checkout -b feature/edit-title
 # 編集機能実装
-git commit -m "feat: enable inline title editing"
+git commit -m "インラインタイトル編集機能の追加"
 git push -u origin feature/edit-title
 # PR → マージ
 ```
@@ -327,12 +327,12 @@ git push -u origin feature/edit-title
 
 | プレフィックス | 意味 | 例 |
 |---|---|---|
-| `feat:` | 新機能 | `feat: add delete button` |
-| `fix:` | バグ修正 | `fix: prevent empty title submission` |
-| `style:` | スタイル変更 | `style: center todo list layout` |
-| `refactor:` | リファクタリング | `refactor: extract api logic to hooks` |
-| `chore:` | 設定・ツール変更 | `chore: update .gitignore` |
-| `docs:` | ドキュメント | `docs: add README` |
+| `feat:` | 新機能 | `feat: 削除ボタンの追加` |
+| `fix:` | バグ修正 | `fix: 空タイトルの送信を防止` |
+| `style:` | スタイル変更 | `style: Todoリストのレイアウトを中央揃えに` |
+| `refactor:` | リファクタリング | `refactor: APIロジックをフックに切り出し` |
+| `chore:` | 設定・ツール変更 | `chore: .gitignoreの更新` |
+| `docs:` | ドキュメント | `docs: READMEの追加` |
 
 ---
 
