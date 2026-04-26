@@ -1,16 +1,16 @@
 import { useState } from 'react';
 
 interface Props {
-  onAdd: (title: string) => void;
+  onAdd: (title: string) => Promise<void>;
 }
 
 export default function TodoForm({ onAdd }: Props) {
   const [title, setTitle] = useState('');
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (title.trim() === '') return;
-    onAdd(title.trim());
+    await onAdd(title.trim());
     setTitle('');
   }
 

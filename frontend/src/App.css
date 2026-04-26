@@ -13,6 +13,16 @@
   margin: 0 0 32px;
 }
 
+.app-error {
+  margin: 0 0 16px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #c53030;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 6px;
+}
+
 /* フォーム */
 .todo-form {
   display: flex;
